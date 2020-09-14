@@ -1,13 +1,27 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
+const votingAge = 19;
 
-
+if(votingAge >= 18){
+    console.log(true);
+} else{
+    console.log(false)
+}
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let fruit1 = "Apple";
+let isTasty = "Yum";
 
+if(isTasty === "Yum"){
+  fruit1 = "Delicious";
+}else {
+  fruit1 = "Gross";
+}
+
+console.log(fruit1);
 
 
 
@@ -19,14 +33,20 @@
 
 //Task d: Write a function to multiply a*b 
 
-
+function add(a, b) {
+  return a * b;
+}
+console.log(add(5,5))
 
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
+function ageindogyears(age) {
+    var dogYears = 7*age;
+    console.log("You are " + dogYears + " years old in dog years!");
+}
 
 
 
@@ -48,6 +68,28 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
+function hungryDog(weight, age) {
+    
+    if(age >= 1 && weight <= 5) {
+      return weight * 0.05
+    }else if(age >= 1 && weight <= 6 && weight <= 10) {
+      return weight * 0.04
+    }else if(age >= 1 && weight <= 11 && weight <= 15) {
+      return weight * 0.03
+    }else if(age >= 1 && weight <15) {
+      return weight * 0.02
+    }else if(age < .75 && age >= 0.583) {
+      return weight * 0.
+    }else if(age < .5 && age >= 0.333) {
+      return weight * 0.05
+    }else if(age < .33 && age >= 0.333) {
+      return weight * 0.05
+    }
+    
+  }
+  
+  // hungryDog(10, .05);
+  console.log(hungryDog(15,1))
   
 
 
@@ -81,7 +123,23 @@
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+function annoyingSong(){
+  var bottles;
+  var bottlesLeft;
+  for (i = 99; i >= 1; i--){
+    if (i==1){
+      bottles=" bottle ";
+      bottlesLeft="No bottles of soda on the wall!";
+    } else{
+      bottles="bottles";
+      bottlesLeft=i - 1 + " bottles of soda on the wall ";
+    } console.log (i+ "" + bottles + " of soda on the wall, ");
+    console.log(i+ "" + bottles + " of soda,");
+    console.log(' take one down, pass it around,');
+    console.log(bottlesLeft);
+  }
+}
+console.log(annoyingSong());
 
 
 
@@ -94,7 +152,24 @@
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
+function grades(number){
+    if(number >=90){
+      return 'A';
+    } else if(number >=80){
+      return 'B';
+    }else if(number >=70){
+      return 'C';
+    }else if(number >=60){
+      return 'D';
+    }else{
+      return 'F';
+    }
+  }
   
+  // grades(100)
+    
+    console.log(grades(5))
+
 
   
   
@@ -111,8 +186,3 @@
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
-
